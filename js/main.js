@@ -241,3 +241,13 @@ AOS.init({
     fixedContentPos: false,
   });
 })(jQuery);
+
+window.addEventListener("load", function () {
+  const loaderWrapper = document.querySelector(".loader-wrapper");
+  setTimeout(() => {
+    loaderWrapper.classList.add("fade-out");
+    setTimeout(() => {
+      loaderWrapper.style.display = "none";
+    }, 500);
+  }, 1000);
+});
