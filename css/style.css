@@ -1,3 +1,112 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.profile-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-heading {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.profile-description,
+.profile-contact {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-badge {
+  max-width: 150px;
+  height: auto;
+}
+
+.tech-section,
+.tools-section,
+.os-section {
+  margin-top: 30px;
+}
+
+.tech-icons,
+.tools-icons,
+.os-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.tech-icon,
+.tools-icon,
+.os-icon {
+  width: 50px;
+  height: auto;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .profile-heading {
+    font-size: 1.5rem;
+  }
+
+  .profile-description,
+  .profile-contact {
+    font-size: 0.9rem;
+  }
+
+  .social-badge {
+    max-width: 120px;
+  }
+
+  .tech-icon,
+  .tools-icon,
+  .os-icon {
+    width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-heading {
+    font-size: 1.2rem;
+  }
+
+  .profile-description,
+  .profile-contact {
+    font-size: 0.8rem;
+  }
+
+  .social-badge {
+    max-width: 100px;
+  }
+
+  .tech-icon,
+  .tools-icon,
+  .os-icon {
+    width: 30px;
+  }
+
+  .profile-section {
+    padding: 10px;
+  }
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
   margin: 0;
@@ -10,7 +119,6 @@ img {
   height: auto;
 }
 
-/* General container adjustments */
 #all {
   padding: 20px;
 }
