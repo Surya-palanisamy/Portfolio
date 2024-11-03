@@ -2,8 +2,6 @@
   	Flaticon icon font: Flaticon
   	Creation date: 04/01/2019 13:45
   	*/
-
-
 @font-face {
   font-family: "Flaticon";
   src: url("../fonts/flaticon/font/Flaticon.eot");
@@ -14,14 +12,12 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "Flaticon";
     src: url("../fonts/flaticon/font/Flaticon.svg#Flaticon") format("svg");
   }
 }
-
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
@@ -30,12 +26,10 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .flaticon-ideas:before { content: "\f100"; }
 .flaticon-flasks:before { content: "\f101"; }
 .flaticon-analysis:before { content: "\f102"; }

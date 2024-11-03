@@ -2,10 +2,8 @@ AOS.init({
   duration: 800,
   easing: "slide",
 });
-
 (function ($) {
   "use strict";
-
   $(window).stellar({
     responsive: true,
     parallaxBackgrounds: true,
@@ -14,7 +12,6 @@ AOS.init({
     hideDistantElements: false,
     scrollProperty: "scroll",
   });
-
   var fullHeight = function () {
     $(".js-fullheight").css("height", $(window).height());
     $(window).resize(function () {
@@ -22,7 +19,6 @@ AOS.init({
     });
   };
   fullHeight();
-
   // loader
   var loader = function () {
     setTimeout(function () {
@@ -32,15 +28,12 @@ AOS.init({
     }, 1);
   };
   loader();
-
   // Scrollax
   $.Scrollax();
-
   // Burger Menu
   var burgerMenu = function () {
     $("body").on("click", ".js-fh5co-nav-toggle", function (event) {
       event.preventDefault();
-
       if ($("#ftco-nav").is(":visible")) {
         $(this).removeClass("active");
       } else {
@@ -49,13 +42,10 @@ AOS.init({
     });
   };
   burgerMenu();
-
   var onePageClick = function () {
     $(document).on("click", '#ftco-nav a[href^="#"]', function (event) {
       event.preventDefault();
-
       var href = $.attr(this, "href");
-
       $("html, body").animate(
         {
           scrollTop: $($.attr(this, "href")).offset().top - 70,
@@ -67,9 +57,7 @@ AOS.init({
       );
     });
   };
-
   onePageClick();
-
   var carousel = function () {
     $(".home-slider").owlCarousel({
       loop: true,
@@ -98,7 +86,6 @@ AOS.init({
     });
   };
   carousel();
-
   $("nav .dropdown").hover(
     function () {
       var $this = $(this);
@@ -120,11 +107,9 @@ AOS.init({
       // }, 100);
     }
   );
-
   $("#dropdown04").on("show.bs.dropdown", function () {
     console.log("show");
   });
-
   // scroll
   var scrollWindow = function () {
     $(window).scroll(function () {
@@ -132,7 +117,6 @@ AOS.init({
         st = $w.scrollTop(),
         navbar = $(".ftco_navbar"),
         sd = $(".js-scroll-wrap");
-
       if (st > 150) {
         if (!navbar.hasClass("scrolled")) {
           navbar.addClass("scrolled");
@@ -147,7 +131,6 @@ AOS.init({
         if (!navbar.hasClass("awake")) {
           navbar.addClass("awake");
         }
-
         if (sd.length > 0) {
           sd.addClass("sleep");
         }
@@ -164,7 +147,6 @@ AOS.init({
     });
   };
   scrollWindow();
-
   var counter = function () {
     $("#section-counter, .hero-wrap, .ftco-counter, .ftco-about").waypoint(
       function (direction) {
@@ -192,7 +174,6 @@ AOS.init({
     );
   };
   counter();
-
   var contentWayPoint = function () {
     var i = 0;
     $(".ftco-animate").waypoint(
@@ -202,7 +183,6 @@ AOS.init({
           !$(this.element).hasClass("ftco-animated")
         ) {
           i++;
-
           $(this.element).addClass("item-animate");
           setTimeout(function () {
             $("body .ftco-animate.item-animate").each(function (k) {
@@ -232,7 +212,6 @@ AOS.init({
     );
   };
   contentWayPoint();
-
   // magnific popup
   $(".image-popup").magnificPopup({
     type: "image",
@@ -253,14 +232,12 @@ AOS.init({
       duration: 300, // don't foget to change the duration also in CSS
     },
   });
-
   $(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({
     disableOn: 700,
     type: "iframe",
     mainClass: "mfp-fade",
     removalDelay: 160,
     preloader: false,
-
     fixedContentPos: false,
   });
 })(jQuery);
