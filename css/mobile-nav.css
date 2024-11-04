@@ -1,9 +1,6 @@
-/* General styling */
 main {
   padding-top: 80px;
 }
-
-/* Hamburger and nav menu styling */
 .hamburger {
   position: fixed;
   right: 4%;
@@ -18,7 +15,6 @@ main {
   z-index: 10000;
   transition: top 0.3s;
 }
-
 .line {
   display: inline-block;
   height: 2px;
@@ -26,7 +22,6 @@ main {
   background-color: #eeeeee;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
 .nav-buttons-mobile {
   position: fixed;
   display: none;
@@ -47,93 +42,75 @@ main {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
 }
-
 .nav-buttons-mobile .nav-btn {
   width: 100%;
   text-align: center;
 }
-
 .hidden-nav {
   transform: translateX(100vw);
 }
-
 .close-1 {
   transform: rotate(45deg) translateY(10px);
 }
-
 .close-2 {
   opacity: 0;
   transform: translateX(-35px);
 }
-
 .close-3 {
   transform: rotate(-45deg) translateY(-10px);
 }
-
-/* Responsive design for 990px and below */
 @media screen and (max-width: 990px) {
   .hamburger {
     display: flex;
   }
-
   .nav-buttons-mobile {
     display: flex;
   }
 }
-
 @media (max-width: 600px) {
   .nav-buttons-mobile {
     width: 80vw;
     transform: translateX(20vw);
   }
-
   .hidden-nav {
     transform: translateX(100vw);
   }
 }
-
 @media (max-width: 400px) {
   .nav-buttons-mobile {
     width: 100vw;
     transform: translateX(0);
   }
-
   .hidden-nav {
     transform: translateX(100vw);
   }
 }
-
-
 .nav-btn {
   font-size: 1.2rem;
   color: #eeeeee;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 12px;
-  position: relative; /* Needed for positioning the underline */
+  position: relative; 
   transition: color 0.3s;
 }
-
 .nav-btn::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
-  bottom: -5px; /* Adjust this value to move the underline closer or farther from the text */
+  bottom: -5px; 
   width: 0;
-  height: 2px; /* Adjust the thickness of the underline */
-  background-color: yellow; /* Color of the underline */
+  height: 2px;
+  background-color: yellow; 
   transition: width 0.3s, left 0.3s;
 }
-
 .nav-btn:hover {
-  color: #ffffff; /* Change text color on hover */
+  color: #ffffff; 
 }
-
 .nav-btn:hover::after {
-  width: 100%; /* Full width underline */
-  left: 0; /* Reset the left position to 0 */
+  width: 100%; 
+  left: 0; 
 }
-
 html {
   scroll-behavior: smooth;
 }
