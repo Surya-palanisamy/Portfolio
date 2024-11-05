@@ -91,26 +91,286 @@ main {
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 12px;
-  position: relative; 
+  position: relative;
   transition: color 0.3s;
 }
 .nav-btn::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -5px; 
+  bottom: -5px;
   width: 0;
   height: 2px;
-  background-color: yellow; 
+  background-color: yellow;
   transition: width 0.3s, left 0.3s;
 }
 .nav-btn:hover {
-  color: #ffffff; 
+  color: #ffffff;
 }
 .nav-btn:hover::after {
-  width: 100%; 
-  left: 0; 
+  width: 100%;
+  left: 0;
 }
 html {
   scroll-behavior: smooth;
+}
+@media screen and (max-width: 991px) {
+  .header-nav .nav-buttons {
+    display: none;
+  }
+  .nav-buttons-mobile {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nav-buttons-mobile {
+    width: 80vw;
+    transform: translateX(20vw);
+  }
+  .hidden-nav {
+    transform: translateX(100vw);
+  }
+  #hero h1 {
+    font-size: 1.8rem;
+  }
+  #hero p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .nav-buttons-mobile {
+    width: 100vw;
+    transform: translateX(0);
+  }
+  .hidden-nav {
+    transform: translateX(100vw);
+  }
+}
+@media screen and (max-width: 991px) {
+  .header-nav .nav-buttons {
+    display: none;
+  }
+  .nav-buttons-mobile {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+  #hero h1 {
+    font-size: 2rem;
+  }
+  #hero p {
+    font-size: 0.9rem;
+  }
+  .glow {
+    width: 45%;
+    min-width: 150px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nav-buttons-mobile {
+    width: 80vw;
+    transform: translateX(20vw);
+  }
+  .hidden-nav {
+    transform: translateX(100vw);
+  }
+  #hero h1 {
+    font-size: 1.8rem;
+  }
+  #hero p {
+    font-size: 0.8rem;
+  }
+  .glow {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .nav-buttons-mobile {
+    width: 100vw;
+    transform: translateX(0);
+  }
+  .hidden-nav {
+    transform: translateX(100vw);
+  }
+  #hero h1 {
+    font-size: 1.5rem;
+  }
+  #hero p {
+    font-size: 0.7rem;
+  }
+}
+#particles-js {
+  will-change: transform;
+}
+.neon {
+  font-size: 3rem;
+  cursor: pointer;
+  font-family: "Lobster";
+  color: white;
+  text-shadow: 0 0 5px #e19500, 0 0 10px #e19500, 0 0 10px #e19500,
+    0 0 17px #e19500;
+}
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  margin-right: auto;
+}
+.header-nav .nav-buttons {
+  display: flex;
+  gap: 0 13px;
+  margin-right: 3%;
+}
+.nav-btn {
+  font-size: 1.2rem;
+  color: #eeeeee;
+  transition: all 0.3s;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+}
+.hamburger {
+  position: fixed;
+  right: 4%;
+  top: 38px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 10000;
+  transition: top 0.3s;
+}
+.line {
+  display: inline-block;
+  height: 2px;
+  width: 25px;
+  background-color: #eeeeee;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.nav-buttons-mobile {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(40vw);
+  top: 0px;
+  gap: 30px;
+  height: 100vh;
+  width: 60vw;
+  backdrop-filter: blur(2px) saturate(180%);
+  -webkit-backdrop-filter: blur(2px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  z-index: 9999;
+  padding: 10% 5%;
+  transition: transform 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+.nav-buttons-mobile .nav-btn {
+  width: 100%;
+  text-align: center;
+}
+.hidden-nav {
+  transform: translateX(100vw);
+}
+.close-1 {
+  transform: rotate(45deg) translateY(10px);
+}
+.close-2 {
+  opacity: 0;
+  transform: translateX(-35px);
+}
+.close-3 {
+  transform: rotate(-45deg) translateY(-10px);
+}
+@media screen and (min-width: 350px) and (max-width: 991px) {
+  .overlay {
+    gap: 10px;
+  }
+  .overlay h1 {
+    margin-bottom: 5px;
+  }
+  .header-nav .nav-buttons {
+    display: none;
+  }
+  .nav-buttons-mobile {
+    display: flex;
+  }
+  .header-nav .branding .brand-name {
+    transform: translateY(0);
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav-btn:focus {
+    color: white;
+    background-color: #767ecf;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #767ecf;
+  }
+}
+@media (min-width: 390px) and (max-width: 844px) {
+  .nav-buttons-mobile {
+    transform: translateX(50vw);
+  }
+  .hidden-nav {
+    transform: translateX(120vw);
+  }
+}
+@media (max-width: 380px) {
+  .hidden-nav {
+    transform: translateX(250vw);
+  }
+}
+
+/* Default styles for the navigation buttons */
+.nav-btn {
+  font-size: 1.2rem;
+  color: #eeeeee; /* White color for non-active state */
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Hover effect for navigation buttons */
+.nav-btn:hover {
+  color: #ffffff; /* Change to bright white on hover */
+}
+
+/* Active class for the navigation buttons */
+.nav-btn.active {
+  color: gold; /* Gold color for the active state */
+}
+
+/* Adding a visual indicator (underline effect) */
+.nav-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: yellow;
+  transition: width 0.3s, left 0.3s;
+}
+.nav-btn:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Ensure that the active nav button has a gold color indicator */
+.nav-btn.active::after {
+  width: 100%;
+  left: 0;
+  background-color: gold;
 }

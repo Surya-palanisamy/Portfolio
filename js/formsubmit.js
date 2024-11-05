@@ -31,34 +31,15 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
       );
     });
 });
-// // Google Apps Script code
-// function doPost(e) {
-//   // Get the spreadsheet and sheet
-//   const spreadsheetId = 'YOUR_SPREADSHEET_ID'; // Replace with your spreadsheet ID
-//   const sheet = SpreadsheetApp.openById(spreadsheetId).getActiveSheet();
-//   // Parse the JSON data from the request
-//   const data = JSON.parse(e.postData.contents);
-//   // Prepare the row data
-//   const rowData = [
-//     new Date(), // Timestamp
-//     data.name,
-//     data.email,
-//     data.subject,
-//     data.message
-//   ];
-//   // Append the row to the spreadsheet
-//   sheet.appendRow(rowData);
-//   // Return success response
-//   return ContentService.createTextOutput(JSON.stringify({ 'status': 'success' }))
-//     .setMimeType(ContentService.MimeType.JSON);
-// }
-// // Add this function to test if the spreadsheet is accessible
-// function testSpreadsheetAccess() {
-//   const spreadsheetId = 'YOUR_SPREADSHEET_ID';
-//   try {
-//     const sheet = SpreadsheetApp.openById(spreadsheetId).getActiveSheet();
-//     Logger.log('Successfully accessed the spreadsheet');
-//   } catch(error) {
-//     Logger.log('Error accessing spreadsheet: ' + error.toString());
-//   }
-// }
+
+// JavaScript to toggle the active class
+const navButtons = document.querySelectorAll('.nav-btn');
+
+navButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Remove active class from all buttons
+    navButtons.forEach(btn => btn.classList.remove('active'));
+    // Add active class to the clicked button
+    button.classList.add('active');
+  });
+});
