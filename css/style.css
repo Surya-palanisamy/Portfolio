@@ -1,9 +1,11 @@
-/* Base Styles */
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: poppins, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 .profile-section {
   max-width: 1200px;
@@ -11964,4 +11966,32 @@ textarea.form-control {
   opacity: 0;
   transition: opacity 0.5s ease-out;
   pointer-events: none;
+}
+
+#about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh; /* Ensures the section takes up full viewport height */
+}
+
+#about-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#about-section .about-info li {
+  list-style: none;
+  padding: 5px 0;
+}
+
+#about-section .heading-section h2 {
+  margin-bottom: 20px;
+}
+
+#about-section .counter-wrap {
+  margin-top: 30px;
 }
