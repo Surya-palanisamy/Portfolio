@@ -31,8 +31,10 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
       );
     });
 });
+
 // JavaScript to toggle the active class
 const navButtons = document.querySelectorAll(".nav-btn");
+
 navButtons.forEach((button) => {
   button.addEventListener("click", () => {
     // Remove active class from all buttons

@@ -197,8 +197,8 @@ window.addEventListener("load", function () {
       loaderWrapper.classList.add("fade-out");
       setTimeout(() => {
         loaderWrapper.style.display = "none";
-      }, 500);
-    }, 1000);
+      }, 50);
+    }, 10);
   }
 });
 window.addEventListener("load", function () {
@@ -206,5 +206,5 @@ window.addEventListener("load", function () {
   setTimeout(function () {
     // Scroll down by 2px after the page has loaded
     window.scrollBy(0, 2);
-  }, 100); // Delay to ensure it's after load
+  }, 10); // Delay to ensure it's after load
 });

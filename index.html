@@ -14,7 +14,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <script src="cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
       rel="stylesheet"
@@ -112,14 +111,14 @@
             >
               <span class="subheading">Hello!</span>
               <h1 class="mb-4 mt-3">
-                I'm a <span style="color: gold; font-weight: 1000">Surya</span>
-                <h3 style="margin-bottom: 20px">
+                I'm a <span style="color: gold; font-weight: 1000">Surya</span><br/>
+                <span style="margin-bottom: 20px">
                   A freelance
                   <span
                     style="color: gold; font-weight: 1000; font-size: xx-large"
                     >web developer</span
                   >
-                </h3>
+                </span>
               </h1>
               <p class="d-flex justify-content-center">
                 <a
@@ -766,6 +765,7 @@
                     <form
                       id="contactForm"
                       class="bg-black p-4 p-md-5 contact-form"
+                      autocomplete="off"
                     >
                       <div class="form-group mb-3">
                         <input
@@ -800,25 +800,25 @@
                       <div class="form-group mb-3">
                         <textarea
                           name="message"
-                          id="messege"
+                          id="message"
                           cols="30"
                           rows="7"
                           class="form-control"
-                          placeholder="message"
+                          placeholder="Message"
                           required
                         ></textarea>
                       </div>
                       <div class="form-group text-center">
                         <input
                           type="submit"
-                          value="Send message"
+                          value="Send Message"
                           class="btn btn-primary py-3 px-5"
                         />
                       </div>
                       <div class="loading-overlay" id="loadingOverlay">
                         <div>
                           <div class="loading-spinner"></div>
-                          <div class="loading-messege">
+                          <div class="loading-message">
                             Sending your message...
                           </div>
                         </div>
