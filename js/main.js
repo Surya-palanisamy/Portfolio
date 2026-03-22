@@ -52,7 +52,7 @@ initBurgerMenu();
 // Smooth scrolling for anchor links
 function initSmoothScrolling() {
   document.addEventListener("click", function (event) {
-    if (event.target.matches('#ftco-nav a[href^="#"]')) {
+    if (event.target.matches('#ftco-navbar a[href^="#"]')) {
       event.preventDefault();
       const targetId = event.target.getAttribute("href").substring(1);
       const targetElement = document.getElementById(targetId);
@@ -130,6 +130,43 @@ function handleNavbarScroll() {
   });
 }
 handleNavbarScroll();
+// Active section highlighting
+function handleActiveSection() {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll("#ftco-navbar .nav-item");
+  const mobileNavLinks = document.querySelectorAll(".nav-buttons-mobile .nav-btn");
+
+  window.addEventListener("scroll", function () {
+    let current = "";
+    const scrollY = window.scrollY;
+
+    sections.forEach(function (section) {
+      const sectionTop = section.offsetTop - 150;
+      const sectionHeight = section.offsetHeight;
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    // Desktop nav highlighting
+    navLinks.forEach(function (item) {
+      item.classList.remove("active");
+      const link = item.querySelector("a");
+      if (link && link.getAttribute("href") === "#" + current) {
+        item.classList.add("active");
+      }
+    });
+
+    // Mobile nav highlighting
+    mobileNavLinks.forEach(function (link) {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+}
+handleActiveSection();
 // Counter animation
 function initCounter() {
   const counters = document.querySelectorAll(".number");

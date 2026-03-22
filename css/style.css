@@ -3688,12 +3688,20 @@ h5 {
   color: #ffbd39 !important;
 }
 .ftco-navbar-light {
-  background: 0 0 !important;
-  position: absolute;
+  background: transparent;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+.ftco-navbar-light.scrolled {
+  background: rgba(0, 0, 0, 0.95) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.ftco-navbar-light.awake {
+  background: rgba(0, 0, 0, 0.95) !important;
 }
 @media (max-width: 991.98px) {
   .ftco-navbar-light {
@@ -3771,13 +3779,17 @@ h5 {
   -o-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
-.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover span:before {
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover span:before,
+.ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link span:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   -moz-transform: scaleX(1);
   -ms-transform: scaleX(1);
   -o-transform: scaleX(1);
   transform: scaleX(1);
+}
+.ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link {
+  color: #ffbd39 !important;
 }
 @media (max-width: 991.98px) {
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
@@ -4790,9 +4802,10 @@ textarea.form-control {
   }
 
   #home-section {
-    min-height: 100vh;
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
+    min-height: auto;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 3rem;
   }
 
   #home-section .one-forth {
