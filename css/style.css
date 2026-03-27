@@ -10,96 +10,253 @@ body {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter";
 }
 
 img {
   max-width: 100%;
   height: auto;
 }
-.profile-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+.skills-section {
+  padding: 40px 0;
+  background: #000;
+}
+
+.skills-header {
   text-align: center;
+  margin-bottom: 30px;
 }
-.profile-heading {
+
+.skills-badge {
+  display: inline-block;
+  background: rgba(249, 109, 0, 0.15);
+  color: #F96D00;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  border: 1px solid rgba(249, 109, 0, 0.3);
+}
+
+.skills-title {
   font-size: 2rem;
-  margin-bottom: 10px;
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
 }
-.profile-contact,
-.profile-description {
-  font-size: 1rem;
-  margin: 10px 0;
+
+.profile-card {
+  background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
+  border-radius: 16px;
+  padding: 25px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
-.social-links {
+
+.profile-greeting {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  10%, 30% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  40% { transform: rotate(-4deg); }
+  50%, 70% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  80% { transform: rotate(-6deg); }
+}
+
+.profile-info {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+.profile-info li {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  padding-left: 10px;
+}
+
+.profile-social {
   display: flex;
+  gap: 15px;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
 }
-.social-badge {
-  max-width: 150px;
-  height: auto;
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
-.os-section,
-.tech-section,
-.tools-section {
-  margin-top: 30px;
+
+.social-btn.linkedin {
+  background: #0077b5;
+  color: #fff;
 }
-.os-icons,
-.tech-icons,
-.tools-icons {
+
+.social-btn.linkedin:hover {
+  background: #005885;
+  transform: translateY(-2px);
+}
+
+.social-btn.instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+}
+
+.social-btn.instagram:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.social-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.skills-category {
+  margin-bottom: 30px;
+}
+
+.category-title {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.category-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #F96D00;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.skills-grid {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
-  margin-top: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: center;
 }
-.os-icon,
-.tech-icon,
-.tools-icon {
-  width: 50px;
-  height: auto;
+
+.skill-card {
+  background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
+  border-radius: 12px;
+  padding: 15px 12px;
+  width: 85px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  cursor: default;
 }
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(249, 109, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(249, 109, 0, 0.15);
+}
+
+.skill-card img {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 8px;
+  object-fit: contain;
+}
+
+.skill-card span {
+  display: block;
+  color: #ccc;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
-  .profile-heading {
+  .skills-title {
+    font-size: 1.75rem;
+  }
+
+  .profile-card {
+    padding: 18px;
+    margin: 0 15px 25px;
+  }
+
+  .profile-greeting {
+    font-size: 1.15rem;
+  }
+
+  .skills-grid {
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .skill-card {
+    width: 75px;
+    padding: 12px 8px;
+  }
+
+  .skill-card img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .skill-card span {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 30px 0;
+  }
+
+  .skills-title {
     font-size: 1.5rem;
   }
-  .profile-contact,
-  .profile-description {
-    font-size: 0.9rem;
+
+  .skills-grid {
+    gap: 8px;
   }
-  .social-badge {
-    max-width: 120px;
+
+  .skill-card {
+    width: 70px;
+    padding: 10px 6px;
   }
-  .os-icon,
-  .tech-icon,
-  .tools-icon {
-    width: 40px;
-  }
-}
-@media (max-width: 480px) {
-  .profile-heading {
-    font-size: 1.2rem;
-  }
-  .profile-contact,
-  .profile-description {
-    font-size: 0.8rem;
-  }
-  .social-badge {
-    max-width: 100px;
-  }
-  .os-icon,
-  .tech-icon,
-  .tools-icon {
-    width: 30px;
-  }
-  .profile-section {
-    padding: 10px;
+
+  .category-title {
+    font-size: 1.1rem;
   }
 }
+
 @media (max-width: 768px) {
   .contact-form,
   .contact-info {
@@ -134,11 +291,8 @@ img {
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  --font-family:"inter"
+    
 }
 *,
 ::after,
@@ -220,7 +374,7 @@ a:not([href]):not([tabindex]):focus {
   outline: 0;
 }
 code {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  font-family: inter,
     "Courier New", monospace;
   font-size: 1em;
 }
@@ -250,7 +404,7 @@ button,
 input,
 textarea {
   margin: 0;
-  font-family: inherit;
+  font-family: inter;
   font-size: inherit;
   line-height: inherit;
 }
@@ -4714,7 +4868,7 @@ textarea.form-control {
 .loader-text {
   position: absolute;
   color: gold;
-  font-family: Arial, sans-serif;
+  font-family: inter;
   font-size: 18px;
   margin-top: 120px;
   text-shadow: 0 0 10px gold;
